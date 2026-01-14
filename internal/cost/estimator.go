@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/terraform-cost-guard/internal/plan"
+	"github.com/ober/terraform-cost-guard/internal/plan"
 )
 
 // CostEstimate represents the estimated cost for a resource

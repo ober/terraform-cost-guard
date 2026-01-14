@@ -1,4 +1,4 @@
-module github.com/terraform-cost-guard
+module github.com/ober/terraform-cost-guard
 
 go 1.21
 

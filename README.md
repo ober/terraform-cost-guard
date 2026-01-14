@@ -9,13 +9,13 @@ Hey, these changes will cost an additional $2000.00/month. Proceed? [y/N]
 ## Installation
 
 ```bash
-go install github.com/terraform-cost-guard/cmd/tfcost@latest
+go install github.com/ober/terraform-cost-guard/cmd/tfcost@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/your-org/terraform-cost-guard
+git clone https://github.com/ober/terraform-cost-guard
 cd terraform-cost-guard
 go build -o tfcost ./cmd/tfcost
 ```
@@ -72,11 +72,11 @@ tfcost estimate tfplan.json
 
 ### Apply/Wrap Flags
 
-| Flag | Short | Description |
-|------|-------|-------------|
-| `--plan` | `-p` | Path to terraform plan JSON file (required for apply) |
-| `--threshold` | `-t` | Only prompt if cost exceeds threshold ($/month) |
-| `--auto-approve` | `-y` | Skip confirmation prompt |
+| Flag             | Short | Description                                           |
+|------------------|-------|-------------------------------------------------------|
+| `--plan`         | `-p`  | Path to terraform plan JSON file (required for apply) |
+| `--threshold`    | `-t`  | Only prompt if cost exceeds threshold ($/month)       |
+| `--auto-approve` | `-y`  | Skip confirmation prompt                              |
 
 ## Examples
 

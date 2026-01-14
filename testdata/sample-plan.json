@@ -1,0 +1,84 @@
+{
+  "format_version": "1.0",
+  "terraform_version": "1.5.0",
+  "resource_changes": [
+    {
+      "address": "aws_instance.web",
+      "mode": "managed",
+      "type": "aws_instance",
+      "name": "web",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "instance_type": "m5.xlarge",
+          "ami": "ami-12345678"
+        }
+      }
+    },
+    {
+      "address": "aws_db_instance.main",
+      "mode": "managed",
+      "type": "aws_db_instance",
+      "name": "main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "instance_class": "db.r5.2xlarge",
+          "allocated_storage": 500,
+          "engine": "postgres"
+        }
+      }
+    },
+    {
+      "address": "aws_nat_gateway.main",
+      "mode": "managed",
+      "type": "aws_nat_gateway",
+      "name": "main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "subnet_id": "subnet-12345"
+        }
+      }
+    },
+    {
+      "address": "aws_lb.app",
+      "mode": "managed",
+      "type": "aws_lb",
+      "name": "app",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "load_balancer_type": "application"
+        }
+      }
+    },
+    {
+      "address": "aws_eks_cluster.main",
+      "mode": "managed",
+      "type": "aws_eks_cluster",
+      "name": "main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "name": "production"
+        }
+      }
+    }
+  ],
+  "planned_values": {
+    "root_module": {
+      "resources": []
+    }
+  }
+}

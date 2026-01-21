@@ -4,7 +4,7 @@ VERSION ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo "dev
 BUILD_TIME := $(shell date -u '+%Y-%m-%d_%H:%M:%S')
 LDFLAGS := -ldflags "-X main.version=$(VERSION) -X main.buildTime=$(BUILD_TIME)"
 
-PREFIX ?= /usr/local
+PREFIX ?= $(HOME)/.local
 BINDIR := $(PREFIX)/bin
 
 .PHONY: all build install uninstall clean test fmt lint
